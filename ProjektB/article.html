@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .bg-img {
+            background-image: url('https://i.insider.com/5da87a534af909256d768f15?width=1000&format=jpeg&auto=webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/e88f5e798f.js" crossorigin="anonymous"></script>
+    <title>článek</title>
+    <style>
+        .grow {
+            transition: all .2s ease-in-out;
+        }
+
+        .grow:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-img">
+
+        <div class="container ">
+
+            <div class="col-sm-12">
+
+                <nav class="navbar navbar-expand-lg navbar-light  bg-light px-5 py-5">
+                    <div class="container-fluid">
+                        <a class="navbar-brand h1 text-dark" href="index.html">
+                            <img src="img/chat.png" width="50" height="50" class=" d-inline-block" alt="logo webu">
+                            AppleZone
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">Domů</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                        aria-expanded="false">Aktuality</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="blog.html">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Kontakt</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="jumbotron jumbotron-fluid  bg-warning py-3 px-5">
+                    <div class="container py-3">
+                        <h1 class="display-5 "></h1>
+                        <p class="lead">
+
+                        </p>
+                    </div>
+                </div>
+                <div class="container px-5 pt-5 bg-light pe-5 pb-2">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="ps-3 pe-5">
+
+                                <h1>Společnost Apple představuje nové generace čipů M1 Pro a M1 Max.</h1>
+                                <div class="row pb-4 text-secondary">
+                                    <div class="col-sm-4"><i class="far fa-clock"></i> Napsal dne 18.10.2021</div>
+                                    <div class="col-sm-3"><i class="fas fa-user"></i> Zdroj: FanApple.com</div>
+                                </div>
+
+                                <img class="img-fluid rounded pe-3"
+                                    src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-2021-gallery-1?wid=4056&hei=2400&fmt=jpeg&qlt=80&.v=1630720516000"
+                                    alt="image">
+                                <p class="pt-4">
+                                    Nam ultricies dolor eu velit varius scelerisque.
+                                    Vestibulum in lacus in felis pretium feugiat non sed elit.
+                                    Duis pretium, urna sed pellentesque tincidunt, neque massa imperdiet nisi, sed
+                                    cursus leo magna pretium elit.
+                                    Proin bibendum ipsum a ante viverra lobortis.
+                                </p>
+                                <br>
+                                <h4 class="text-center" style="font-weight: bold;" id="demo"></h4>
+                                <br>
+
+                                <script>
+                                    // datum od ktereho odpocitat
+                                    var countDownDate = new Date("Dec 24, 2021 00:00:01").getTime();
+
+                                    // aktualizovat cas kazdou sekundu
+                                    var x = setInterval(function () {
+
+                                        // ziskat dnesni den
+                                        var now = new Date().getTime();
+
+                                        // rozdil casu
+                                        var distance = countDownDate - now;
+
+                                        // výpočet d,h,m,s
+                                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                                        var hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+                                        var minutes = Math.floor((distance / (1000 * 60)) % 60);
+                                        var seconds = Math.floor( (distance / 1000) % 60);
+
+                                        // zobrazit aktuální odpočet
+                                        document.getElementById("demo").innerHTML = "Zbývá:  " + days + " dní " + hours + "h "
+                                            + minutes + "m " + seconds + "s ";
+
+                                        // čas vypršel
+                                        if (distance < 0) {
+                                            clearInterval(x);
+                                            document.getElementById("demo").innerHTML = "Čas vypršel";
+                                        }
+                                    }, 1000);
+                                </script>
+                                <p>
+                                    Sed nunc tortor, sagittis quis viverra id, molestie vitae nibh.
+                                    Donec vitae lacus sed risus accumsan consectetur ut a ligula. Etiam vitae nisi diam,
+                                    in rutrum dui.
+                                    In facilisis, erat sed laoreet aliquet, mauris urna placerat enim, eget varius nulla
+                                    lacus ut erat.
+                                    Mauris faucibus orci ac turpis facilisis et tempus metus venenatis. Pellentesque
+                                    ornare, risus et vulputate mollis, massa nulla aliquam neque, sed hendrerit orci
+                                    quam eget ante.
+                                    Morbi pulvinar ligula at sapien ultricies hendrerit. Morbi mollis dictum libero at
+                                    ultrices.
+                                    Phasellus facilisis metus non dui tempor gravida. Proin fermentum sollicitudin ante,
+                                    sed tempor eros molestie id.
+                                    Donec volutpat odio eu mi imperdiet nec laoreet diam venenatis.
+                                    Nunc ac purus aliquet mauris interdum accumsan
+                                </p>
+                                <br><br>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group rounded pb-4">
+                                <input type="search" class="form-control rounded" placeholder="Search"
+                                    aria-label="Search" aria-describedby="search-addon" />
+                                <button type="button" class="btn btn-outline-primary">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <br>
+                            <div>
+                                <h3>Kategorie</h3>
+                                <ul class="list-group list-group-flush ">
+                                    <a href="#" class="list-group-item list-group-item-action ">Iphone</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Software</a>
+                                    <a href="#" class="list-group-item list-group-item-action">Hardware</a>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-10">
+                            <hr>
+                            <h2>Komentáře</h2>
+                            <div class=" p-2">
+                                <div class="d-flex flex-row user-info">
+                                    <div class="d-flex flex-column justify-content-start ml-2"><span
+                                            style="font-weight: bold;">Marry Andrews</span><span
+                                            class="date text-black-50">Zveřejněno - 4.12.2021</span></div>
+                                </div>
+                                <div class="mt-2 pe-5">
+                                    <p class="comment-text text-start">Lorem ipsum dolor sit amet, consectetur
+                                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                        ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                            <div class="bg-light p-2">
+                                <div class="d-flex flex-row align-items-start"><textarea
+                                        class="form-control ml-1 shadow-none textarea"
+                                        placeholder="Napište komentář..."></textarea></div>
+                                <div class="mt-3 text-right"><button class="btn btn-primary"
+                                        type="button">Přidat komentář</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <footer class="text-light" style="background-color:#333;">
+                    <div class="container p-5">
+                        <section>
+                            <div class="row pt-3">
+                                <div class="col-md-6 col-lg-3">
+
+                                    <h4 class="text-light text-uppercase">O nás</h3>
+                                        <hr class="mb-3 mt-0 d-inline-block mx-auto"
+                                            style="width: 60px; height: 2px; color: white;">
+                                        <p>
+                                            iPhones Blog není jen internetový magazín, ale především denní zpravodajský
+                                            portál, který se snaží
+                                            neustále sledovat veškerou situaci okolo společnosti Apple a informovat
+                                            veškerou komunitu
+                                            jablečných fanoušků.
+                                        </p>
+                                </div>
+
+                                <div class="col-md-6 col-lg-3">
+
+                                    <h4 class="text-light text-uppercase">Kontakty</h4>
+                                    <hr class="mb-3 mt-0 d-inline-block mx-auto"
+                                        style="width: 60px; height: 2px; color: white;">
+                                    <p><i class="fas fa-home me-3"></i>123 Street, New York, USA</p>
+                                    <p><i class="fa fa-phone-alt  me-3"></i>+012 345 67890</p>
+                                    <p><i class="fa fa-envelope  me-3"></i>info@example.com</p>
+                                    <p><i class="far fa-clock  me-3"></i>Mon - Fri, 9AM - 10PM</p>
+
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+
+                                    <h4 class="text-light text-uppercase">Užitečné odkazy</h4>
+                                    <hr class="mb-3 mt-0 d-inline-block "
+                                        style="width: 60px; height: 2px; color: white;">
+                                    <p><a class="text-decoration-none text-light" href="index.html">Domů</a></p>
+                                    <p><a class="text-decoration-none text-light" href="blog.html">Články</a></p>
+                                    <p><a class="text-decoration-none text-light" href="contact.html">Kontakty</a></p>
+
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h4 class="text-light text-uppercase">Fotografie</h4>
+                                            <div class="col-sm-4 px-1">
+                                                <hr class="mb-3 mt-0 d-inline-block mx-auto"
+                                                    style="width: 60px; height: 2px; color: white;">
+                                                <img class="w-100  mb-2"
+                                                    src="https://d25-a.sdn.cz/d_25/c_img_gZ_Z/LJGBvYL.png"
+                                                    onclick="onClick(this)" alt="Image" style="cursor:pointer">
+                                            </div>
+                                            <div class="col-sm-4 mt-4 px-1">
+                                                <img class="w-100 float-start  mb-2"
+                                                    src="https://d25-a.sdn.cz/d_25/c_img_gZ_Z/LJGBvYL.png"
+                                                    onclick="onClick(this)" alt="Image" style="cursor:pointer">
+                                            </div>
+                                            <div class="col-sm-4  mt-4 px-1">
+                                                <img class="w-100  mb-2"
+                                                    src="https://d25-a.sdn.cz/d_25/c_img_gZ_Z/LJGBvYL.png"
+                                                    onclick="onClick(this)" alt="Image" style="cursor:pointer">
+                                            </div>
+                                            <div class="col-sm-4 px-1">
+                                                <img class="w-100 mb-2 float-start"
+                                                    src="https://d25-a.sdn.cz/d_25/c_img_gZ_Z/LJGBvYL.png"
+                                                    onclick="onClick(this)" alt="Image" style="cursor:pointer">
+                                            </div>
+                                            <div class="col-sm-4 px-1">
+                                                <img class="w-100 mb-2 float-start"
+                                                    src="https://d25-a.sdn.cz/d_25/c_img_gZ_Z/LJGBvYL.png"
+                                                    onclick="onClick(this)" alt="Image" style="cursor:pointer">
+                                            </div>
+                                            <div class="col-sm-4 px-1">
+                                                <img class="w-100 mb-2 float-start"
+                                                    src="https://d25-a.sdn.cz/d_25/c_img_gZ_Z/LJGBvYL.png"
+                                                    onclick="onClick(this)" alt="Image" style="cursor:pointer">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="container pt-3 px-5" style="background-color:  rgba(0, 0, 0, 0.2);">
+                        <div class="row align-items-center">
+                            <div class="col-9 mb-4">
+                                <span class=""> ©2021 VIA-Studentský projekt</span>
+                            </div>
+                            <div class="col-3 mb-3 text-center">
+                                <a class="btn btn-primary btn-floating m-1 rounded-circle"
+                                    style="background-color: #3b5998; border: none;" href="https://www.facebook.com"
+                                    role="button" data-mdb-ripple-color="dark">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-primary btn-floating m-1 rounded-circle"
+                                    style="background-color: #55acee; border: none;" href="https://www.twitter.com"
+                                    role="button">
+                                    <i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-primary btn-floating m-1 rounded-circle"
+                                    style="background-color: #dd4b39;border: none;" href="https://www.google.com"
+                                    role="button">
+                                    <i class="fab fa-google"></i></a>
+                                <a class="btn btn-primary btn-floating m-1 rounded-circle"
+                                    style="background-color: #ac2bac;border: none;" href="https://www.instagram.com"
+                                    role="button">
+                                    <i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <img id="img01" style="width:100%">
+                    </div>
+                </div>
+
+                <script>
+
+                    function img(url) {
+                        $("#obrazek").attr("src", url);
+                    }
+                    function onClick(element) {
+                        document.getElementById("img01").src = element.src;
+                        document.getElementById("modal01").style.display = "block";
+                    }
+
+
+
+                </script>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
